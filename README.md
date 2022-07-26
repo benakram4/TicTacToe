@@ -1,2 +1,5 @@
 # TicTacToe
-TicTacToe Game
+TicTacToe Game, built using HTML, CSS and JS
+
+Codepen Link:
+
