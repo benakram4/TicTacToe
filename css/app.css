@@ -1,0 +1,27 @@
+ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+li{
+    border: 3px solid black;
+    border-radius: 5px;
+    font-size: 5em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.occupied {
+    background-color: rgba(200, 100, 150, 3);
+}
+
+.unoccupied {
+    background-color: rgba(100, 100, 150, 3);
+}
