@@ -1,14 +1,11 @@
-// alert("JavaScript Called");
+
 console.log("JavaScript Called");
 
 let player = true; // true - X. false - O
 let board = [ [], [], []];
-// const board = [ ['X', 'O', "X"],
-//                 ['X', 'O', "X"],
-//                 ['X', 'O', "X"] ] ;
+
 
 const TakeTurn = (rc) => {
-    // console.log(`board : ${board}`);
     console.log(`player ${player ? 'X' : 'O'} taking turn`);
 
     //identify which row and column user have clicked on
@@ -18,12 +15,7 @@ const TakeTurn = (rc) => {
 
     console.log(`row : ${row} col : ${col}`);
 
-    // console.log(`body : ${window.document.body}`);
-    // console.log(`body : ${document.body}`);
-    // console.log(`title : ${document.title}`);
-
     const selectedElem = document.getElementById(`c${row}${col}`);  //c21
-    //const selectedElem = document.getElementById("c21");
 
     //check if the tile has already been played or not
     if (selectedElem.classList.contains("unoccupied") === true){
@@ -32,10 +24,6 @@ const TakeTurn = (rc) => {
         //display the text 'X' or 'O' on the selected tile
         selectedElem.innerHTML = `${player ? 'X' : 'O'}`;
         board[row][col] = `${player ? 'X' : 'O'}`;
-
-        //set the class to occupied and remove unoccupied
-        selectedElem.classList.remove("unoccupied");
-        selectedElem.classList.add("occupied");
 
         //change the player if current player has successfully played their turn
         player = !player;
@@ -54,9 +42,6 @@ const resetGame = () => {
     board = [ [], [], []];
 
     let tileCells = document.getElementsByTagName("li");
-
-    // document.getElementsByTagName("li").classList.remove("occupied");
-    // document.getElementsByTagName("li").classList.add("unoccupied");
 
     for (tile of tileCells){
         tile.classList.remove("occupied");
